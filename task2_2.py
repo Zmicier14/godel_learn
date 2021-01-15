@@ -9,3 +9,21 @@ def input_number(a):
 
 d = input_number('1st')
 e = input_number('2nd')
+while True:
+    oper = input('Input the arifmethic operation(+,-,/,*):')
+    if oper == '+':
+        print('Result = ', d + e)
+        break
+    elif oper == '-':
+        print('Result = ', d - e)
+        break
+    elif oper == '/' and e == 0:
+        print('Division by zero!')
+    elif oper == '/' and e != 0:
+        print('Result = ', d / e)
+        break
+    elif oper == '*':
+        print('Result = ', d * e)
+        break
+    else:
+        print('Input correct operation!')
