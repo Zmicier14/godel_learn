@@ -1,29 +1,30 @@
 def input_number(a):
-    b = None
-    while b == None:        #Как-то по-другому можно сделать выход из этого цикла?
+    user_input = None
+    while user_input == None:  # Как-то по-другому можно сделать выход из этого цикла?
         try:
-            b = float(input(f'Please input the {a} number = '))
+            user_input = float(input(f"Please input the {a} number = "))
         except ValueError:
-            print('Please input right number!')
-    return b
+            print("Please input right number!")
+    return user_input
 
-d = input_number('1st')
-e = input_number('2nd')
+
+first_number = input_number("1st")
+second_number = input_number("2nd")
 while True:
-    oper = input('Input the arifmethic operation(+,-,/,*):')
-    if oper == '+':
-        print('Result = ', d + e)
+    operation = input("Input the arifmethic operation(+,-,/,*):")
+    if operation == "+":
+        print("Result = ", first_number + second_number)
         break
-    elif oper == '-':
-        print('Result = ', d - e)
+    elif operation == "-":
+        print("Result = ", first_number - second_number)
         break
-    elif oper == '/' and e == 0:
-        print('Division by zero!')
-    elif oper == '/' and e != 0:
-        print('Result = ', d / e)
+    elif operation == "/" and second_number == 0:
+        print("Division by zero!")
+    elif operation == "/" and second_number != 0:
+        print("Result = ", first_number / second_number)
         break
-    elif oper == '*':
-        print('Result = ', d * e)
+    elif operation == "*":
+        print("Result = ", first_number * second_number)
         break
     else:
-        print('Input correct operation!')
+        print("Input correct operation!")
