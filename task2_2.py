@@ -7,7 +7,7 @@ def input_number(a):
             print("Please input right number!")
     return user_input
 
-
+#Adding a commit
 first_number = input_number("1st")
 second_number = input_number("2nd")
 while True:
