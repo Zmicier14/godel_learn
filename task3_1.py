@@ -10,7 +10,7 @@ def reverse_string(str):
 
     word = ''
     words = []
- #   reverse_str = ''
+    reverse_str = ''
 
     i = 0
 
@@ -22,12 +22,17 @@ def reverse_string(str):
             word = ''
         i += 1
 
- #'''   j = len(words)
-
- #   while j > 0:
-#        reverse_string = reverse_str 
-#'''
     words.reverse()
-    return words
 
-print(reverse_string('I hate Lukashenko'))
+    j = 0
+    while j < len(words):
+        if j < len(words) - 1:
+            reverse_str = reverse_str + words[j] + ' '
+        else:
+            reverse_str = reverse_str + words[j]
+        j += 1
+
+    return reverse_str
+
+print(reverse_string(input('Please input the string:')))
+#print(f"{reverse_string('I hate Lukashenko')}.")
