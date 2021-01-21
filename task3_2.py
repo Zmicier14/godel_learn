@@ -1,4 +1,7 @@
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 def generate_password(dictionary):
     return_passwd = []
@@ -22,14 +25,17 @@ def generate_password(dictionary):
     return_passwd = [passwd, count_letter, count_spec_mark, count_punc_mark]        
     return return_passwd
 
-def check_password():
+def correct_password():
     passwd = generate_password(dictionary)
     check = False
     while check != False:
-        if passwd[1] > 2 and passwd[2] > 2 and passwd[3] > 2:
+        if passwd[2] > 2 and passwd[3] > 2:
             check = True
-    return passwd[0] 
+    return passwd 
 
 dictionary = ["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "@#$%^&*()-_+=></", "!?.,'"]
-#temp_passwd = generate_password(dictionary))
-print(check_password())
+
+password = correct_password()
+print(f"Password is: ",end='')
+print(Fore.RED+Back.WHITE+password[0])
+print(f"The number of letters = {password[1]}\nThe number of special marks = {password[2]}\nThe number of punctiotional marks = {password[3]}")
