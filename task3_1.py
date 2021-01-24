@@ -8,29 +8,9 @@ def reverse_string(string):
     'language interesting pretty is Python
     '''
 
-    word = ''
-    words = []
-    reverse_str = ''
-
-    i = 0
- #   words = string.split()
-    for char in string:
-        if char not in ' ':
-            word = word + char
-        if (char in ' ') or (i == len(string) - 1):
-            words.append(word)
-            word = ''
-        i += 1
-
+    words = string.split()
     words.reverse()
-
-    j = 0
-    while j < len(words):
-        if j < len(words) - 1:
-            reverse_str = reverse_str + words[j] + ' '
-        else:
-            reverse_str = reverse_str + words[j]
-        j += 1
+    reverse_str = ' '.join(words)
 
     return reverse_str
 
