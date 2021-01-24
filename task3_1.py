@@ -1,4 +1,4 @@
-def reverse_string(str):
+def reverse_string(string):
     ''' (str) -> str
     Returns reversed string str.
 
@@ -13,11 +13,11 @@ def reverse_string(str):
     reverse_str = ''
 
     i = 0
-
-    for char in str:
+ #   words = string.split()
+    for char in string:
         if char not in ' ':
             word = word + char
-        if (char in ' ') or (i == len(str) - 1):
+        if (char in ' ') or (i == len(string) - 1):
             words.append(word)
             word = ''
         i += 1
@@ -35,4 +35,3 @@ def reverse_string(str):
     return reverse_str
 
 print(reverse_string(input('Please input the string:')))
-#print(f"{reverse_string('I hate Lukashenko')}.")
